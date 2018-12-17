@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="520.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerController">
+    <children>
+        <Label layoutX="6.0" layoutY="5.0" text="CalAir">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Label>
+        <Button layoutX="642.0" layoutY="21.0" mnemonicParsing="false" onAction="#logoutAction" prefHeight="29.0" prefWidth="94.0" text="Logout" />
+        <Button layoutX="510.0" layoutY="82.0" mnemonicParsing="false" onAction="#checkInAction" prefHeight="27.0" prefWidth="210.0" text="Check In">
+            <font>
+                <Font size="9.0" />
+            </font>
+        </Button>
+        <Button layoutX="270.0" layoutY="82.0" mnemonicParsing="false" onAction="#viewFlightAction" prefHeight="27.0" prefWidth="210.0" text="View Flight Status">
+            <font>
+                <Font size="9.0" />
+            </font>
+        </Button>
+        <Button layoutX="30.0" layoutY="82.0" mnemonicParsing="false" onAction="#purchaseTicAction" prefHeight="27.0" prefWidth="210.0" text="Search Flights">
+            <font>
+                <Font size="9.0" />
+            </font>
+        </Button>
+        <AnchorPane fx:id="BasePane" layoutX="30.0" layoutY="135.0" prefHeight="375.0" prefWidth="690.0">
+            <children>
+                <Label layoutX="75.0" layoutY="115.0" text="Welcome To CalAir">
+                    <font>
+                        <Font size="60.0" />
+                    </font>
+                </Label>
+            </children></AnchorPane>
+    </children>
+</AnchorPane>

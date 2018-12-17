@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="520.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CreateUserController">
+   <children>
+      <Label layoutX="6.0" layoutY="5.0" text="CalAir">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Button layoutX="642.0" layoutY="21.0" mnemonicParsing="false" onAction="#submitBack" prefHeight="29.0" prefWidth="94.0" text="Back" />
+      <TabPane layoutY="65.0" prefHeight="350.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Create Account">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="401.0" prefWidth="728.0">
+                     <children>
+                        <Label layoutX="243.0" layoutY="30.0" text="Create Account">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="firstNameField" layoutX="70.0" layoutY="93.0" prefHeight="27.0" prefWidth="280.0" promptText="Enter First Name" />
+                        <TextField fx:id="lastNameField" layoutX="400.0" layoutY="92.0" prefHeight="27.0" prefWidth="280.0" promptText="Enter Last Name" />
+                        <TextField fx:id="usernameField" layoutX="70.0" layoutY="144.0" prefHeight="27.0" prefWidth="280.0" promptText="Enter User Name" />
+                        <TextField fx:id="emailField" layoutX="400.0" layoutY="145.0" prefHeight="27.0" prefWidth="280.0" promptText="Enter Email" />
+                        <PasswordField fx:id="passwordField" layoutX="70.0" layoutY="197.0" prefHeight="27.0" prefWidth="280.0" promptText="Enter Password" />
+                        <PasswordField fx:id="confirmPasswordField" layoutX="400.0" layoutY="197.0" prefHeight="27.0" prefWidth="280.0" promptText="Confrim Password" />
+                        <DatePicker fx:id="birthDateField" layoutX="278.0" layoutY="240.0" promptText="Date of Birth" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button layoutX="342.5" layoutY="449.0" mnemonicParsing="false" onAction="#submitSubmit" prefHeight="27.0" prefWidth="65.0" text="Submit" />
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="60.0" layoutY="415.0" prefHeight="24.0" prefWidth="628.0" text="Invalid Input" textFill="#d00909" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

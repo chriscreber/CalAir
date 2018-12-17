@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UpdateFlightController">
+    <children>
+        <Label layoutX="226.0" layoutY="24.0" text="Update Flight">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <TextField fx:id="flightNumberField" layoutX="262.0" layoutY="114.0" promptText="Enter Flight Number" />
+        <Label fx:id="messageLabel" alignment="CENTER" layoutX="240.0" layoutY="289.0" prefHeight="17.0" prefWidth="202.0" text="Successfully Updated User" textFill="#11e818" visible="false" />
+      <TextField fx:id="flightStatusField" layoutX="262.0" layoutY="161.0" promptText="Enter New Status" />
+      <Button fx:id="submitButton" layoutX="310.0" layoutY="213.0" mnemonicParsing="false" onAction="#updateFlight" text="Submit" />
+    </children>
+</AnchorPane>

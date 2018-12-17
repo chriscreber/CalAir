@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PurchaseTicketController">
+    <children>
+        <ListView fx:id="flightView" editable="true" layoutX="45.0" layoutY="108.0" prefHeight="197.0" prefWidth="600.0" visible="false" />
+      <Label layoutX="209.0" layoutY="14.0" text="Search Flights">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="selectDates" layoutX="197.0" layoutY="164.0" promptText="Select Depart Date" />
+      <Button fx:id="submitButton" layoutX="408.0" layoutY="164.0" mnemonicParsing="false" onAction="#getDates" text="Submit" />
+      <Button fx:id="purchaseDepartButton" layoutX="220.0" layoutY="321.0" mnemonicParsing="false" onAction="#purchaseDeparture" prefHeight="24.0" prefWidth="194.0" text="Purchase Departure Ticket" visible="false" />
+      <Button fx:id="purchaseReturnButton" layoutX="220.0" layoutY="320.0" mnemonicParsing="false" onAction="#purchaseReturn" prefHeight="24.0" prefWidth="194.0" text="Purchase Departure Ticket" visible="false" />
+      <Label fx:id="departLabel" layoutX="118.0" layoutY="62.0" text="DEPART" visible="false">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="returnLabel" layoutX="458.0" layoutY="62.0" text="RETURN" visible="false">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="sourceDepartLabel" layoutX="41.0" layoutY="97.0" text="Source:" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="sourceReturnLabel" layoutX="366.0" layoutY="97.0" text="Source:" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="destinationDepartLabel" layoutX="40.0" layoutY="144.0" text="Destination:" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="destinationReturnLabel" layoutX="364.0" layoutY="144.0" text="Destination:" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="sourceDepartInfoLabel" layoutX="108.0" layoutY="99.0" prefHeight="17.0" prefWidth="166.0" text="Label" visible="false" />
+      <Label fx:id="destinationDepartInfoLabel" layoutX="136.0" layoutY="147.0" prefHeight="17.0" prefWidth="166.0" text="Label" visible="false" />
+      <Label fx:id="priceDepartLabel" layoutX="39.0" layoutY="184.0" text="Price:" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="priceReturnLabel" layoutX="364.0" layoutY="187.0" text="Price:" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="priceDepartInfoLabel" layoutX="94.0" layoutY="186.0" prefHeight="17.0" prefWidth="166.0" text="Label" visible="false" />
+      <Label fx:id="sourceReturnInfoLabel" layoutX="427.0" layoutY="98.0" prefHeight="17.0" prefWidth="166.0" text="Label" visible="false" />
+      <Label fx:id="destinationReturnInfoLabel" layoutX="456.0" layoutY="147.0" prefHeight="17.0" prefWidth="166.0" text="Label" visible="false" />
+      <Label fx:id="priceReturnInfoLabel" layoutX="417.0" layoutY="190.0" prefHeight="17.0" prefWidth="166.0" text="Label" visible="false" />
+      <Label fx:id="departDepartDateLabel" layoutX="37.0" layoutY="218.0" text="Depart Date:" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="departDateReturnLabel" layoutX="363.0" layoutY="219.0" text="Depart Date:" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="departDateReturnInfoLabel" layoutX="460.0" layoutY="221.0" prefHeight="17.0" prefWidth="166.0" text="Label" visible="false" />
+      <Label fx:id="departDepartDateInfoLabel" layoutX="140.0" layoutY="221.0" prefHeight="17.0" prefWidth="166.0" text="Label" visible="false" />
+      <Button fx:id="confirmButton" layoutX="244.0" layoutY="288.0" mnemonicParsing="false" onAction="#confirmPurchase" prefHeight="27.0" prefWidth="194.0" text="Confirm Purchase" visible="false" />
+      <Label fx:id="confirmationLabel" layoutX="90.0" layoutY="170.0" prefHeight="29.0" prefWidth="243.0" text="Confirmation Number:" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="thankYouLabel" layoutX="80.0" layoutY="89.0" text="THANK YOU FOR YOUR PURCHASE" textFill="#1eb519" visible="false">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberLabel" layoutX="321.0" layoutY="170.0" prefHeight="17.0" prefWidth="174.0" text="numberLabel" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="titleLabel" alignment="CENTER" layoutX="243.0" layoutY="117.0" prefHeight="17.0" prefWidth="174.0" text="View Flights For The Week" textAlignment="CENTER" />
+      <Label fx:id="listLabel" alignment="CENTER" layoutX="233.0" layoutY="81.0" prefHeight="17.0" prefWidth="194.0" />
+    </children>
+</AnchorPane>

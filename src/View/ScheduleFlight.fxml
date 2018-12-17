@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ScheduleFlightController">
+    <children>
+        <Label alignment="CENTER" layoutX="211.0" prefHeight="44.0" prefWidth="268.0" text="Schedule Flight">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+      <Label fx:id="locationInstructions" layoutX="51.0" layoutY="49.0" text="1. Enter destination" />
+      <Label fx:id="durationInstructions" layoutX="53.0" layoutY="83.0" text="2. Enter duration and departure date" />
+        <TextField fx:id="durationField" layoutX="38.0" layoutY="101.0" prefHeight="27.0" prefWidth="165.0" promptText="Enter Duration (hh:mm)" />
+        <DatePicker fx:id="dateField" layoutX="240.0" layoutY="101.0" prefHeight="27.0" prefWidth="157.0" promptText="Enter Depart Date" />
+      <Button fx:id="submitDurationButton" layoutX="426.0" layoutY="101.0" mnemonicParsing="false" onAction="#getDepartSuggestions" text="Get Times" />
+      <Label fx:id="selectTimeInstructions" layoutX="49.0" layoutY="142.0" prefHeight="17.0" prefWidth="588.0" text="3. Select the departure time" />
+      <ChoiceBox fx:id="suggestionChoices" layoutX="34.0" layoutY="170.0" prefWidth="150.0" />
+      <Button fx:id="selectTime" layoutX="210.0" layoutY="169.0" mnemonicParsing="false" onAction="#getReturnSuggestions" text="Select departure time" />
+        <TextField fx:id="priceField" layoutX="30.0" layoutY="307.0" prefHeight="27.0" prefWidth="158.0" promptText="Enter Price" />
+      <Button fx:id="locationButton" layoutX="403.0" layoutY="44.0" mnemonicParsing="false" onAction="#submitDestination" text="Submit Locations" />
+      <Button fx:id="scheduleFlightButton" layoutX="217.0" layoutY="307.0" mnemonicParsing="false" onAction="#scheduleFlight" text="Schedule Flight" />
+      <ChoiceBox fx:id="destinationChoices" layoutX="205.0" layoutY="44.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="returnSuggestions" layoutX="30.0" layoutY="241.0" prefWidth="150.0" />
+      <Label fx:id="returnInstructions" layoutX="49.0" layoutY="213.0" prefHeight="17.0" prefWidth="611.0" text="4. Select the departure time of the return flight" />
+      <Button fx:id="selectReturnTakeoff" layoutX="204.0" layoutY="242.0" mnemonicParsing="false" onAction="#getSuggestedPrice" text="Select Return Takeoff" />
+      <Label fx:id="priceInstructions" layoutX="53.0" layoutY="283.0" prefHeight="17.0" prefWidth="278.0" text="5. Enter the price for the flights" />
+      <Label fx:id="scheduleConfirmation" layoutX="247.0" layoutY="161.0" text="FLIGHTS SCHEDULED" textAlignment="CENTER" textFill="#46f21f">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="ruleOne" layoutX="13.0" layoutY="106.0" text="1. There must be at least a 40 minute gap between each takeoff or landing at the SLO airport." />
+      <Label fx:id="ruleThree" layoutX="11.0" layoutY="175.0" text="3. We must be able to accommodate at least two round trip flights per week to each of the six locations." />
+      <Label fx:id="ruleTwo" layoutX="12.0" layoutY="141.0" text="2. Each flight has a standard duration which is updated with historical data." />
+      <Label fx:id="businessRulesTitle" layoutX="283.0" layoutY="83.0" text="Business Rules" />
+      <Button fx:id="businessRulesButton" layoutX="241.0" layoutY="200.0" mnemonicParsing="false" onAction="#acceptBusinessRules" text="Proceed to Scheduling" />
+    </children>
+</AnchorPane>

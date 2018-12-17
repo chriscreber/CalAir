@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <TextField fx:id="usernameField" layoutX="142.0" layoutY="181.0" promptText="Username" />
+      <PasswordField fx:id="passwordField" layoutX="142.0" layoutY="217.0" prefHeight="27.0" prefWidth="167.0" promptText="Password">
+         <font>
+            <Font size="10.0" />
+         </font></PasswordField>
+      <Button layoutX="85.0" layoutY="329.0" mnemonicParsing="false" onAction="#submitLogin" prefHeight="27.0" prefWidth="114.0" text="Login" />
+      <Button layoutX="245.0" layoutY="329.0" mnemonicParsing="false" onAction="#submitRegister" text="Create Account" />
+      <Label layoutX="159.0" layoutY="60.0" prefHeight="56.0" prefWidth="133.0" text="CalAir">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <Label fx:id="invalidLogin" alignment="CENTER" layoutX="97.0" layoutY="283.0" prefHeight="17.0" prefWidth="258.0" textFill="#e80606" />
+   </children>
+</AnchorPane>

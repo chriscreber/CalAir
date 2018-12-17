@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="350.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ManagePriceController">
+   <children>
+      <Label alignment="CENTER" layoutX="176.0" layoutY="20.0" prefHeight="44.0" prefWidth="338.0" text="Manage Base Price">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="responseLabel" layoutX="226.0" layoutY="225.0" prefHeight="17.0" prefWidth="249.0" textFill="#0aeb28" />
+      <MenuButton fx:id="locationMenu" layoutX="182.0" layoutY="175.0" mnemonicParsing="false" text="Select Location">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Los Angeles" />
+            <MenuItem mnemonicParsing="false" text="San Francisco" />
+            <MenuItem mnemonicParsing="false" text="San Diego" />
+            <MenuItem mnemonicParsing="false" text="Arizona" />
+            <MenuItem mnemonicParsing="false" text="Seattle" />
+            <MenuItem mnemonicParsing="false" text="Dallas" />
+         </items>
+      </MenuButton>
+      <TextField fx:id="priceField" layoutX="350.0" layoutY="175.0" prefHeight="27.0" prefWidth="158.0" promptText="Enter Price" />
+      <Text layoutX="182.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location:" />
+      <Text layoutX="350.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Base Price:" />
+      <Button fx:id="submitPriceButton" layoutX="286.0" layoutY="291.0" mnemonicParsing="false" onAction="#submitPrice" text="Submit Price" />
+   </children>
+</AnchorPane>
